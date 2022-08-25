@@ -300,7 +300,7 @@ def mouse_scroll(amount):
                 scroll_amount += amount
             else:
                 scroll_amount = amount
-        actions.mouse_scroll(y=int(amount))
+        mouse_scroll_custom(y=int(amount))
 
     return scroll
 
@@ -311,7 +311,12 @@ def scroll_continuous_helper():
     if scroll_amount and (
         eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_IDLE
     ):  # or eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_SLEEP):
-        actions.mouse_scroll(by_lines=False, y=int(scroll_amount / 10))
+        mouse_scroll_custom(by_lines=False, y=int(scroll_amount / 10))
+
+def mouse_scroll_custom(y: int, **kwargs):
+    mouse_button = 5 if y > 0 else 4
+    actions.user.run_shell(f"xdotool mousedown {mouse_button}")
+    actions.user.run_shell(f"xdotool mouseup {mouse_button}")
 
 
 def start_scroll():
@@ -347,7 +352,7 @@ def gaze_scroll():
 
         midpoint = rect.y + rect.height / 2
         amount = int(((y - midpoint) / (rect.height / 10)) ** 3)
-        actions.mouse_scroll(by_lines=False, y=amount)
+        mouse_scroll_custom(by_lines=False, y=amount)
 
     # print(f"gaze_scroll: {midpoint} {rect.height} {amount}")
 
