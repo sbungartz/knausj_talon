@@ -287,6 +287,7 @@ def on_pop(active):
     ):
         if setting_mouse_enable_pop_click.get() >= 1:
             ctrl.mouse_click(button=0, hold=16000)
+            actions.user.mouse_drag_end()
 
 
 noise.register("pop", on_pop)
