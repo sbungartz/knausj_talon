@@ -75,13 +75,14 @@ clear left: key(backspace)
 
 clear right: key(delete)
 
-clear up:
-    edit.extend_line_up()
-    edit.delete()
-
-clear down:
-    edit.extend_line_down()
-    edit.delete()
+# CUSTOM: Disable "clear up" and down because "clear left" often got mistaken for "clear up"
+# clear up:
+#     edit.extend_line_up()
+#     edit.delete()
+#
+# clear down:
+#     edit.extend_line_down()
+#     edit.delete()
 
 clear word: edit.delete_word()
 
