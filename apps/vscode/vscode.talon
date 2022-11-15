@@ -1,6 +1,5 @@
 #custom vscode commands go here
 app: vscode
-not tag: terminal
 -
 tag(): user.find_and_replace
 tag(): user.line_commands
@@ -151,38 +150,38 @@ fold six: user.vscode("editor.foldLevel6")
 fold seven: user.vscode("editor.foldLevel7")
 
 # Git / Github (not using verb-noun-adjective pattern, mirroring terminal commands.)
-git branch: user.vscode("git.branchFrom")
-git branch this: user.vscode("git.branch")
-git checkout [<user.text>]:
+source branch: user.vscode("git.branchFrom")
+source branch this: user.vscode("git.branch")
+source checkout [<user.text>]:
     user.vscode("git.checkout")
     sleep(50ms)
     insert(text or "")
-git commit [<user.text>]:
+source commit [<user.text>]:
     user.vscode("git.commitStaged")
     sleep(100ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
-git commit undo: user.vscode("git.undoCommit")
-git commit amend: user.vscode("git.commitStagedAmend")
-git diff: user.vscode("git.openChange")
-git fetch: user.vscode("git.fetch")
-git fetch all: user.vscode("git.fetchAll")
-git ignore: user.vscode("git.ignore")
-git merge: user.vscode("git.merge")
-git output: user.vscode("git.showOutput")
-git pull: user.vscode("git.pullRebase")
-git push: user.vscode("git.push")
-git push focus: user.vscode("git.pushForce")
-git rebase abort: user.vscode("git.rebaseAbort")
-git reveal: user.vscode("git.revealInExplorer")
-git revert: user.vscode("git.revertChange")
-git stash: user.vscode("git.stash")
-git stash pop: user.vscode("git.stashPop")
-git status: user.vscode("workbench.scm.focus")
-git stage: user.vscode("git.stage")
-git stage all: user.vscode("git.stageAll")
-git sync: user.vscode("git.sync")
-git unstage: user.vscode("git.unstage")
-git unstage all: user.vscode("git.unstageAll")
+source commit undo: user.vscode("git.undoCommit")
+source commit amend: user.vscode("git.commitStagedAmend")
+source diff: user.vscode("git.openChange")
+source fetch: user.vscode("git.fetch")
+source fetch all: user.vscode("git.fetchAll")
+source ignore: user.vscode("git.ignore")
+source merge: user.vscode("git.merge")
+source output: user.vscode("git.showOutput")
+source pull: user.vscode("git.pullRebase")
+source push: user.vscode("git.push")
+source push focus: user.vscode("git.pushForce")
+source rebase abort: user.vscode("git.rebaseAbort")
+source reveal: user.vscode("git.revealInExplorer")
+source revert: user.vscode("git.revertChange")
+source stash: user.vscode("git.stash")
+source stash pop: user.vscode("git.stashPop")
+source status: user.vscode("workbench.scm.focus")
+source stage: user.vscode("git.stage")
+source stage all: user.vscode("git.stageAll")
+source sync: user.vscode("git.sync")
+source unstage: user.vscode("git.unstage")
+source unstage all: user.vscode("git.unstageAll")
 pull request: user.vscode("pr.create")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
