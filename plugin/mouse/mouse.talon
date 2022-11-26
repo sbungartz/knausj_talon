@@ -59,52 +59,52 @@ right drag | righty drag:
     # close the mouse grid
     user.grid_close()
 end drag | drag end: user.mouse_drag_end()
-wheel down: user.mouse_scroll_down()
-wheel down here:
+(scroll | school) down: user.mouse_scroll_down()
+(scroll | school) down here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down()
-wheel tiny [down]: user.mouse_scroll_down(0.2)
-wheel tiny [down] here:
+(scroll | school) tiny [down]: user.mouse_scroll_down(0.2)
+(scroll | school) tiny [down] here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.2)
-wheel downer: user.mouse_scroll_down_continuous()
-wheel downer here:
+(scroll | school) downer: user.mouse_scroll_down_continuous()
+(scroll | school) downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
-wheel up: user.mouse_scroll_up()
-wheel up here:
+(scroll | school) up: user.mouse_scroll_up()
+(scroll | school) up here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up()
-wheel tiny up: user.mouse_scroll_up(0.2)
-wheel tiny up here:
+(scroll | school) tiny up: user.mouse_scroll_up(0.2)
+(scroll | school) tiny up here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.2)
-wheel upper: user.mouse_scroll_up_continuous()
-wheel upper here:
+(scroll | school) upper: user.mouse_scroll_up_continuous()
+(scroll | school) upper here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up_continuous()
-wheel gaze: user.mouse_gaze_scroll()
-wheel gaze here:
+(scroll | school) gaze: user.mouse_gaze_scroll()
+(scroll | school) gaze here:
     user.mouse_move_center_active_window()
     user.mouse_gaze_scroll()
-wheel stop: user.mouse_scroll_stop()
-wheel stop here:
+(scroll | school) stop: user.mouse_scroll_stop()
+(scroll | school) stop here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_stop()
-wheel left: user.mouse_scroll_left()
-wheel left here:
+(scroll | school) left: user.mouse_scroll_left()
+(scroll | school) left here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_left()
-wheel tiny left: user.mouse_scroll_left(0.5)
-wheel tiny left here:
+(scroll | school) tiny left: user.mouse_scroll_left(0.5)
+(scroll | school) tiny left here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_left(0.5)
-wheel right: user.mouse_scroll_right()
-wheel right here:
+(scroll | school) right: user.mouse_scroll_right()
+(scroll | school) right here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_right()
-wheel tiny right: user.mouse_scroll_right(0.5)
-wheel tiny right here:
+(scroll | school) tiny right: user.mouse_scroll_right(0.5)
+(scroll | school) tiny right here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_right(0.5)
 copy mouse position: user.copy_mouse_position()
