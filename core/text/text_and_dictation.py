@@ -96,6 +96,20 @@ def raw_prose(m) -> str:
     """Mixed words and punctuation, auto-spaced & capitalized, without quote straightening and commands (for use in dictation mode)."""
     return apply_formatting(m)
 
+# ---- Custom addition for german capture
+ctx_de = Context()
+ctx_de.matches = """
+language: de_DE
+"""
+
+@ctx_de.capture(
+    "user.raw_prose",
+    rule="({user.vocabulary} | {user.punctuation} | {user.prose_snippets} | <phrase> | <user.prose_number>)+"
+)
+def raw_prose_de(m) -> str:
+    """Mixed words and punctuation, auto-spaced & capitalized, without quote straightening and commands (for use in dictation mode)."""
+    return apply_formatting(m)
+# ---- End: Custom addition for german capture
 
 # ---------- FORMATTING ---------- #
 def format_phrase(m):
