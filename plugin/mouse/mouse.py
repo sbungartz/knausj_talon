@@ -322,7 +322,7 @@ def mouse_scroll_custom(y: int, **kwargs):
 
 def start_scroll():
     global scroll_job
-    scroll_job = cron.interval("60ms", scroll_continuous_helper)
+    scroll_job = cron.interval("160ms", scroll_continuous_helper)
     # if eye_zoom_mouse.zoom_mouse.enabled and eye_mouse.mouse.attached_tracker is not None:
     #    eye_zoom_mouse.zoom_mouse.sleep(True)
 
